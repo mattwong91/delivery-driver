@@ -225,9 +225,10 @@ GameObject:
   m_Component:
   - component: {fileID: 624015921}
   - component: {fileID: 624015920}
-  - component: {fileID: 624015919}
   - component: {fileID: 624015923}
   - component: {fileID: 624015922}
+  - component: {fileID: 624015919}
+  - component: {fileID: 624015924}
   m_Layer: 0
   m_Name: Axel
   m_TagString: Untagged
@@ -378,6 +379,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &624015924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624015918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34b17781151f458cb489b8475b80341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &827387063
 GameObject:
   m_ObjectHideFlags: 0

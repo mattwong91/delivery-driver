@@ -8,4 +8,9 @@ public class Collision : MonoBehaviour
   {
     Debug.Log($"{name} bumped into {other.gameObject.name}");
   }
+
+  void OnTriggerEnter2D(Collider2D other)
+  {
+    Debug.Log($"{name} triggered {other.gameObject.name}");
+  }
 }

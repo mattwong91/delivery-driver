@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class Delivery : MonoBehaviour
 {
+  [SerializeField] float destroyDelay = 1f;
+  bool hasPackage = false;
+
   void OnCollisionEnter2D(Collision2D other)
   {
-    Debug.Log($"{name} bumped into {other.gameObject.name}");
+    Debug.Log("BUMP");
   }
 
   void OnTriggerEnter2D(Collider2D other)
   {
-    if (other.tag == "Package")
+    if (other.tag == "Package" && !hasPackage)
     {
       Debug.Log("package picked up");
+      hasPackage = true;
+      Destroy(other.gameObject, destroyDelay);
     }
-    if (other.tag == "Customer")
+    if (other.tag == "Customer" && hasPackage)
     {
       Debug.Log("You delivered the package!");
+      hasPackage = false;
     }
   }
 }
